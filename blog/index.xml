@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Malware Blog</title>
-    <link>https://example.org/blog/</link>
+    <link>https://0xcambie.github.io/cambie/blog/</link>
     <description>Recent content in Blogs on Malware Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>matteratze@gmail.com (Cambie ツ)</managingEditor>
     <webMaster>matteratze@gmail.com (Cambie ツ)</webMaster>
     <lastBuildDate>Wed, 15 Jan 2025 13:35:25 -0300</lastBuildDate>
-    <atom:link href="https://example.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://0xcambie.github.io/cambie/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Malware Lab</title>
-      <link>https://example.org/blog/malwarelab/</link>
+      <link>https://0xcambie.github.io/cambie/blog/malwarelab/</link>
       <pubDate>Wed, 15 Jan 2025 13:35:25 -0300</pubDate><author>matteratze@gmail.com (Cambie ツ)</author>
-      <guid>https://example.org/blog/malwarelab/</guid>
+      <guid>https://0xcambie.github.io/cambie/blog/malwarelab/</guid>
       <description>&lt;p&gt;One of the key aspects of analyzing malware is having a safe environment in which we can detonate malware without any danger. In this guide we&amp;rsquo;ll set up our own lab using qemu/kvm stack.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start with the basics.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-is-kvm-qemu-and-libvirt-&#34;&gt;What is KVM, Qemu and libvirt ?&lt;/h3&gt;&#xA;&lt;p&gt;These three components are system tools, services or features that enable us to virtualize.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;KVM (Kernel-based Virtual Machine)&lt;/strong&gt; is an open source virtualization technology for Linux OS. It allows Linux to function as a hypervisor that runs multiple, isolated VMs.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Qemu (Quick Emulator)&lt;/strong&gt; is a generic and open source machine emulator and virtualizer. The most common use is for System Emulation, where it provides hardware such as Disk, network and USB. Even though the CPU can be fully emulated, it may work with a hypervisor like KVM to allow the guest to run directly on the host CPU.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;libvirt&lt;/strong&gt; is an opensource API, daemon and management tool for managing platform virtualization. It can be used to manage KVM, Xen, VM-Ware, Qemu, etc. APIs are consumed by client tools for provisioning and managing VMs.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;why-qemu&#34;&gt;why qemu?&lt;/h3&gt;&#xA;&lt;p&gt;In my experience qemu is insanely fast and incredibly reliable when it comes to virtualization.&lt;/p&gt;</description>
     </item>
   </channel>
