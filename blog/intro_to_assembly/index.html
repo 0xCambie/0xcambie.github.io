@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>
+ASM Introduction | Cambie ツ
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.142.0">
+
+
+<link rel="canonical" href="https://0xcambie.github.io/cambie/blog/intro_to_assembly/" >
+<link rel="icon" href="/cambie/favicon/radioactive.png" type="image/png">
+
+
+
+
+<link href="/cambie/css/style.min.5c1fa9bba2d0e854fe30b3d6316ab0114a2a5f25c9a98275badeadb66f2ec725.css" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="https://0xcambie.github.io/cambie/">
+                <span>cambie@malbian ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="https://0xcambie.github.io/cambie/about" title="" >
+                        ~/about</a>
+                </li>
+                
+                <li>
+                    <a href="https://0xcambie.github.io/cambie/malbian" title="" >
+                        ~/malbian</a>
+                </li>
+                
+                <li>
+                    <a href="https://0xcambie.github.io/cambie/blog" title="" >
+                        ~/blog</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+    <h1>ASM Introduction</h1>
+    
+    
+    <section class="postMetadata">
+        <dl>
+            
+            
+            
+            
+                <dt>published</dt>
+                
+                <dd><time datetime="2025-02-07">February 7, 2025</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>7 minutes</dd>
+            
+        </dl>
+    </section>
+    
+    <div>
+        <h1 id="aseembly">Aseembly!</h1>
+<p>Assembly is a low-levelr programming language that provides a human-readable representation of machine code instructions. When reverse engineering malware, malcicious programs can be converted from binary machine code to assembly code; a process calledd to as &lsquo;disassembly&rsquo;.</p>
+<p>x86 assembly refers to 32-bit architecture and x86_64 (x64) is for 64-bit acrhitectures.</p>
+<h3 id="cpu-registers">CPU Registers</h3>
+<p>As a program is running, CPUs uses registers, which are memory locations on the physical processor chip, to store data and keep track of the processing state. Because memory storage is much slower, the CPU takes advantage of registers as much as possible for data storage and manipulation. Depending on processor Architecture, each register can store a certain amount of data. A <em>word</em> is equal to 16 bits of data. An x86 processor can store one <em>dword</em> (double-word) or 32 bits of data, while an x64 processor register can store one <em>qword</em> (quad-word) or 64 bits of data.</p>
+<p>There are five primary types of CPU registers:</p>
+<ol>
+<li>General Registers.</li>
+<li>Index and Pointer Registers.</li>
+<li>Flag Registers.</li>
+<li>Segment Registers.</li>
+<li>Indicator Registers</li>
+</ol>
+<p><strong>General Registers</strong></p>
+<p>These registers are used to store and process data for general purposes such as arithmetic operations and function arguments. each general register can be split into smaller segments containing 16 or 8 bits of data.
+For example, the x64 RAX register, which can store 64 bits of data, contains four additional smaller general registers:</p>
+<ul>
+<li>EAX (The last 32 bits of data in RAX)</li>
+<li>AX (The upper 16 bits of EAX)</li>
+<li>AH (The upper 8 bits of EAX)</li>
+<li>AL (The lower 8 bits of EAX)</li>
+</ul>
+<p>The following table describes each general register for x86 and x64 processors. These descriptions reflect how each register has been used historically; this doesn&rsquo;t mean that the register must be used in this way.</p>
+<table>
+  <thead>
+      <tr>
+          <th>x86 Register</th>
+          <th>x64 Register</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>EAX</td>
+          <td>RAX</td>
+          <td>The accumulation register, used for tasks such as arithmetic, interrupts, and storing return values.</td>
+      </tr>
+      <tr>
+          <td>AX</td>
+          <td>AX</td>
+          <td>Upper 16 bits of EAX</td>
+      </tr>
+      <tr>
+          <td>AH</td>
+          <td>AH</td>
+          <td>Upper 8 bits of EAX</td>
+      </tr>
+      <tr>
+          <td>AL</td>
+          <td>AL</td>
+          <td>Lower 8 bits of EAX</td>
+      </tr>
+      <tr>
+          <td>EBX</td>
+          <td>RBX</td>
+          <td>Used for referencing variables and arguments.</td>
+      </tr>
+      <tr>
+          <td>BX</td>
+          <td>BX</td>
+          <td>Upper 16 bits of EBX</td>
+      </tr>
+      <tr>
+          <td>BH</td>
+          <td>BH</td>
+          <td>Upper 8 bits of EBX</td>
+      </tr>
+      <tr>
+          <td>BL</td>
+          <td>BL</td>
+          <td>Lower 8 bits of EBX</td>
+      </tr>
+      <tr>
+          <td>ECX</td>
+          <td>RCX</td>
+          <td>The counter register, used for counting and loop control.</td>
+      </tr>
+      <tr>
+          <td>CX</td>
+          <td>CX</td>
+          <td>Upper 16 bits of ECX</td>
+      </tr>
+      <tr>
+          <td>CH</td>
+          <td>CH</td>
+          <td>Upper 8 bits of ECX</td>
+      </tr>
+      <tr>
+          <td>CL</td>
+          <td>CL</td>
+          <td>Lower 8 bits of ECX</td>
+      </tr>
+      <tr>
+          <td>EDX</td>
+          <td>RDX</td>
+          <td>The data register, used primarily for arithmetic operations and sometimes as a backup for EAX.</td>
+      </tr>
+      <tr>
+          <td>DX</td>
+          <td>DX</td>
+          <td>Upper 16 bits of EDX</td>
+      </tr>
+      <tr>
+          <td>DH</td>
+          <td>DH</td>
+          <td>Upper 8 bits of EDX</td>
+      </tr>
+      <tr>
+          <td>DL</td>
+          <td>DL</td>
+          <td>Lower 8 bits of EDX</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Index and Pointer Registers</strong></p>
+<p>These registers can store both pointers and addresses. They can be used for tasks such as transferring memory data, maintaining control flow, and keeping track of the stack.</p>
+<table>
+  <thead>
+      <tr>
+          <th>x86 Register</th>
+          <th>x64 Register</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ESI</td>
+          <td>RSI</td>
+          <td>The source index; typically serves as the source address in memory operations.</td>
+      </tr>
+      <tr>
+          <td>EDI</td>
+          <td>RDI</td>
+          <td>The destination index; typically serves as the destination addreess in memory operations.</td>
+      </tr>
+      <tr>
+          <td>EBP</td>
+          <td>RBP</td>
+          <td>The base pointer; points to the base of the stack.</td>
+      </tr>
+      <tr>
+          <td>ESP</td>
+          <td>RSP</td>
+          <td>The stack pointer; points to the last item pushed to the stack.</td>
+      </tr>
+      <tr>
+          <td>EIP</td>
+          <td>RIP</td>
+          <td>The extended instruction pointer; points to the address of the code that will be executed next.</td>
+      </tr>
+  </tbody>
+</table>
+<p><em>Note: ESI, EDI, EBP and ESP can be broken down into it&rsquo;s 16-bit segments. ESI would have SI as it&rsquo;s 16-bit segment, EDI would have DI, EBP woulda BP and ESP would have SP.</em></p>
+<p><strong>The Flags Register</strong></p>
+<p>This register keeps track of the current state of the processor. Generally, it&rsquo;s used for storing the results of computations and controlling the processor&rsquo;s operation. Flags is general term for &lsquo;EFLAGS&rsquo; register, which is used in 32-bit architectures, while the &lsquo;RFLAGS&rsquo; are used in 64-bit architectures.</p>
+<p>The two most important flag values for our purposes are the <em>zero flag</em> (ZF) and <em>trap flag</em> (TF). The ZF is a single bit in length and is set with a conditional intruction. For example, a conditional intruction may compare two values; if the values are the same, the ZF will be set to 1. The TF is used for debugging purposes and allows the debugger to single-step through instructions.</p>
+<p><strong>Segment Registers</strong></p>
+<p>These registers are used specifically for referencing memory locations. There are three different methods of accessing system memory of which we will focus on the flat memory model which is relevant for malware analysis.</p>
+<p>There are Six Segment Registers which are as follows:</p>
+<ul>
+<li>CS (Code Segment) Register - Stores the base location of the code section (.text) which is used for data access.</li>
+<li>DS (Data Segment) Register - Stores the default location for variables (.data) which is used for data access.</li>
+<li>ES (Extra Segment) Register - Used during string operations.</li>
+<li>SS (Stack Segment) Register - Stores the base location of the stack segment and is used when implicitly using the stack pointer or when explicitly using the base pointer.</li>
+<li>FS (Extra Segment Register)</li>
+<li>GS (Extra Segment Register)</li>
+</ul>
+<p>Each segment register is 16-bits and contains the pointer to the start of the memory-specific segment. The CS register contains the pointer to the code segment in memory. The code segment is where the instruction codes are stored in memory. The processor retrieves instruction codes from memory based on the CS register value and an offset value contained in the EIP register. No program can explicitly load or change the CS register. The processor assign its values as the program is assigned a memory space.</p>
+<p>The DS, ES, FS and GS segment registers are all used to point to data segments. Each of the four separate data segments help the program separate data elements to ensure that they do not overlap. The program loads the data segment registers with the appropriate pointer value for the segments and then reference individual memory locations using an offset value.</p>
+<p>The Stack Segment Register (SS) is used to point to the stack segment. The stack contains data values passed to functions and procedures within the program.</p>
+<p>Segment registers are considererd part of the OS and can neither read nor be changed directly in almost all cases. When working in the protected mode flat model, our program runs and receives a 4GB address space to which any 32-bit register can potentially address any of the four billion memoryu locations except for those protected areas defined by the operating system. Physical memory can be larger than 4GB however, a 32-bit register can only express 4294967295 different locations. If we have more than 4GB of memory, the OS must arrange a 4GB region within memory and your programs are limited to that new region. This task is completed by the segment registers and the OS keeps close control of this.</p>
+<p><strong>Control Registers</strong></p>
+<p>There are five control registers which are used to determine the operation mode of the CPU and the characteristics of the current executing task. Each control register is as follows:</p>
+<ul>
+<li>CR0 - System flag that control the operating mode and various states of the processor.</li>
+<li>CR1 - (Not currently implemented)</li>
+<li>CR2 - Memory page fault information.</li>
+<li>CR3 - Memory page directory information.</li>
+<li>CR4 - Flags that enable processor feathers and indicate feature capabilities of the processor.</li>
+</ul>
+<p>The values in eac of the control registers can&rsquo;t be directly accessed however the data in the control registers can be moved to one of the general-purpose registers and once the data is there, a program can examine the bit flags in the register to determine the operating status of the processor in conjunction with the current running task.</p>
+<p>If a change is required to a control register flag value, the change can be made to the data in the general purpose register and the register moved to the CR. Low-level System Programmers usually modify the values in control registers. Normal application programs do not usually control registers entries however they might query flag values to determine the capabilities of the host processor chip on which the program is currently running.</p>
+<h3 id="why-learn-assembly-">Why Learn Assembly ?</h3>
+<p>Most malware is written ina  middle-level language and once compiled it can be read by the hardware or OS as it is not human-readable. In order for professional Cyber Security Engineers to understand, we must learn to read, write and properly debug Assembly.</p>
+<p>Assembly language is low.-level and has many more instruction thatn we would see in a higher level application, however, what is powerful about assembly is that it contains the absolute truth about what is going on in the binary. In the assembly level nothing is hidden from us. Understanding Assembly language allow us to open a debugger on a running process or any bit of malware and we can see exactly what is going on and then grab the EIP instruction pointer to go where we need it to go to have complete control over the program flow.</p>
+
+    </div>
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2025 Cambie ツ
+        </span>
+    
+</footer>
+
+    </div>
+
+</body>
+
+</html>

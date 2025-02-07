@@ -2,11 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://0xcambie.github.io/cambie/blog/intro_to_assembly/</loc>
+    <lastmod>2025-02-07T09:31:00-03:00</lastmod>
+  </url><url>
     <loc>https://0xcambie.github.io/cambie/blog/</loc>
-    <lastmod>2025-01-15T13:35:25-03:00</lastmod>
+    <lastmod>2025-02-07T09:31:00-03:00</lastmod>
   </url><url>
     <loc>https://0xcambie.github.io/cambie/</loc>
-    <lastmod>2025-01-15T13:35:25-03:00</lastmod>
+    <lastmod>2025-02-07T09:31:00-03:00</lastmod>
   </url><url>
     <loc>https://0xcambie.github.io/cambie/blog/malwarelab/</loc>
     <lastmod>2025-01-15T13:35:25-03:00</lastmod>
