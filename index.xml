@@ -29,7 +29,14 @@
       <link>https://0xcambie.github.io/cambie/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>matteratze@gmail.com (Cambie ツ)</author>
       <guid>https://0xcambie.github.io/cambie/about/</guid>
-      <description>&lt;h3 id=&#34;whoami&#34;&gt;Whoami?&lt;/h3&gt;&#xA;&lt;p&gt;My name is Cambie. I&amp;rsquo;m the creator and maintainer of the &lt;a href=&#34;https://0xcambie.github.io/cambie/cambie/malbian&#34;&gt;Malbian Project&lt;/a&gt;: A Simple &amp;amp; Lightweight debian-based GNU/Linux distribution focused on Malware Analysis and Reverse Engineering.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m also a Cybersecurity enthusiast with love and passion for GNU/Linux and Low level code!&lt;/p&gt;&#xA;&lt;p&gt;I made this blog in order to keep track of my progress while also providing content related to Malware Analysis, RE and Hacking. Here you&amp;rsquo;ll find documentation, writeups and walkthroughs about certain challenges, samples or simply raw information.&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;whoami&#34;&gt;Whoami?&lt;/h3&gt;&#xA;&lt;p&gt;My name is Cambie. I&amp;rsquo;m the creator and maintainer of the &lt;a href=&#34;https://0xcambie.github.io/cambie/malbian&#34;&gt;Malbian Project&lt;/a&gt;: A Simple &amp;amp; Lightweight debian-based GNU/Linux distribution focused on Malware Analysis and Reverse Engineering.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m also a Cybersecurity enthusiast with love and passion for GNU/Linux and Low level code!&lt;/p&gt;&#xA;&lt;p&gt;I made this blog in order to keep track of my progress while also providing content related to Malware Analysis, RE and Hacking. Here you&amp;rsquo;ll find documentation, writeups and walkthroughs about certain challenges, samples or simply raw information.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Donate</title>
+      <link>https://0xcambie.github.io/cambie/donate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>matteratze@gmail.com (Cambie ツ)</author>
+      <guid>https://0xcambie.github.io/cambie/donate/</guid>
+      <description>&lt;p&gt;You can support Me and/or my project through Monero!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Support Me!:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;85R69a3r6Pe3MUrf9VTvkmeu9GxyPyq7iMmVcpYwsLRvaMSi5bLgW9PKJHVJJg7B64SpcHKVsbLsvee8HKz7VuEeBFGHRor&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Support Malbian:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;8735KjeRLbmBJkiCxgUHzj4gUATo6X4QqAnA1FwiXYLZatcGdhFu45zbVGfwkYakhaRYS43HZRVYJX6xEgim57kcEVFNAfd&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Malbian Project</title>
