@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Malware Blog</title>
-    <link>https://0xcambie.github.io/cambie/</link>
+    <link>/</link>
     <description>Recent content on Malware Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>matteratze@gmail.com (Cambie ツ)</managingEditor>
     <webMaster>matteratze@gmail.com (Cambie ツ)</webMaster>
     <lastBuildDate>Fri, 07 Feb 2025 09:31:00 -0300</lastBuildDate>
-    <atom:link href="https://0xcambie.github.io/cambie/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ASM Introduction</title>
-      <link>https://0xcambie.github.io/cambie/blog/intro_to_assembly/</link>
+      <link>/blog/intro_to_assembly/</link>
       <pubDate>Fri, 07 Feb 2025 09:31:00 -0300</pubDate><author>matteratze@gmail.com (Cambie ツ)</author>
-      <guid>https://0xcambie.github.io/cambie/blog/intro_to_assembly/</guid>
+      <guid>/blog/intro_to_assembly/</guid>
       <description>&lt;h1 id=&#34;aseembly&#34;&gt;Aseembly!&lt;/h1&gt;&#xA;&lt;p&gt;Assembly is a low-level programming language that provides a human-readable representation of machine code instructions. When reverse engineering malware, malcicious programs can be converted from binary machine code to assembly code; a process called as &amp;lsquo;disassembly&amp;rsquo;.&lt;/p&gt;&#xA;&lt;p&gt;x86 assembly refers to 32-bit architecture and x86_64 (x64) is for 64-bit acrhitectures.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-are-cpu-registers-&#34;&gt;What are CPU Registers ?&lt;/h3&gt;&#xA;&lt;p&gt;As a program is running, CPUs uses registers, which are memory locations on the physical processor chip, to store data and keep track of the processing state. Because memory storage is much slower, the CPU takes advantage of registers as much as possible for data storage and manipulation. Depending on processor Architecture, each register can store a certain amount of data. A &lt;em&gt;word&lt;/em&gt; is equal to 16 bits of data. An x86 processor can store one &lt;em&gt;dword&lt;/em&gt; (double-word) or 32 bits of data, while an x64 processor register can store one &lt;em&gt;qword&lt;/em&gt; (quad-word) or 64 bits of data.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Malware Lab</title>
-      <link>https://0xcambie.github.io/cambie/blog/malwarelab/</link>
+      <link>/blog/malwarelab/</link>
       <pubDate>Wed, 15 Jan 2025 13:35:25 -0300</pubDate><author>matteratze@gmail.com (Cambie ツ)</author>
-      <guid>https://0xcambie.github.io/cambie/blog/malwarelab/</guid>
+      <guid>/blog/malwarelab/</guid>
       <description>&lt;p&gt;One of the key aspects of analyzing malware is having a safe environment in which we can detonate malware without any danger. In this guide we&amp;rsquo;ll set up our own lab using qemu/kvm stack.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start with the basics.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-is-kvm-qemu-and-libvirt-&#34;&gt;What is KVM, Qemu and libvirt ?&lt;/h3&gt;&#xA;&lt;p&gt;These three components are system tools, services or features that enable us to virtualize.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;KVM (Kernel-based Virtual Machine)&lt;/strong&gt; is an open source virtualization technology for Linux OS. It allows Linux to function as a hypervisor that runs multiple, isolated VMs.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Qemu (Quick Emulator)&lt;/strong&gt; is a generic and open source machine emulator and virtualizer. The most common use is for System Emulation, where it provides hardware such as Disk, network and USB. Even though the CPU can be fully emulated, it may work with a hypervisor like KVM to allow the guest to run directly on the host CPU.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;libvirt&lt;/strong&gt; is an opensource API, daemon and management tool for managing platform virtualization. It can be used to manage KVM, Xen, VM-Ware, Qemu, etc. APIs are consumed by client tools for provisioning and managing VMs.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;why-qemu&#34;&gt;Why qemu?&lt;/h3&gt;&#xA;&lt;p&gt;In my experience qemu is insanely fast and incredibly reliable when it comes to virtualization.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
-      <link>https://0xcambie.github.io/cambie/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>matteratze@gmail.com (Cambie ツ)</author>
-      <guid>https://0xcambie.github.io/cambie/about/</guid>
-      <description>&lt;h3 id=&#34;whoami&#34;&gt;Whoami?&lt;/h3&gt;&#xA;&lt;p&gt;My name is Cambie. I&amp;rsquo;m the creator and maintainer of the &lt;a href=&#34;https://0xcambie.github.io/cambie/malbian&#34;&gt;Malbian Project&lt;/a&gt;: A Simple &amp;amp; Lightweight debian-based GNU/Linux distribution focused on Malware Analysis and Reverse Engineering.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m also a Cybersecurity enthusiast with love and passion for GNU/Linux and Low level code!&lt;/p&gt;&#xA;&lt;p&gt;I made this blog in order to keep track of my progress while also providing content related to Malware Analysis, RE and Hacking. Here you&amp;rsquo;ll find documentation, writeups and walkthroughs about certain challenges, samples or simply raw information.&lt;/p&gt;</description>
+      <guid>/about/</guid>
+      <description>&lt;h3 id=&#34;whoami&#34;&gt;Whoami?&lt;/h3&gt;&#xA;&lt;p&gt;My name is Cambie. I&amp;rsquo;m the creator and maintainer of the &lt;a href=&#34;/cambie/malbian&#34;&gt;Malbian Project&lt;/a&gt;: A Simple &amp;amp; Lightweight debian-based GNU/Linux distribution focused on Malware Analysis and Reverse Engineering.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m also a Cybersecurity enthusiast with love and passion for GNU/Linux and Low level code!&lt;/p&gt;&#xA;&lt;p&gt;I made this blog in order to keep track of my progress while also providing content related to Malware Analysis, RE and Hacking. Here you&amp;rsquo;ll find documentation, writeups and walkthroughs about certain challenges, samples or simply raw information.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Donate</title>
-      <link>https://0xcambie.github.io/cambie/donate/</link>
+      <link>/donate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>matteratze@gmail.com (Cambie ツ)</author>
-      <guid>https://0xcambie.github.io/cambie/donate/</guid>
+      <guid>/donate/</guid>
       <description>&lt;p&gt;You can support Me and/or my project through Monero!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Support Me:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;85R69a3r6Pe3MUrf9VTvkmeu9GxyPyq7iMmVcpYwsLRvaMSi5bLgW9PKJHVJJg7B64SpcHKVsbLsvee8HKz7VuEeBFGHRor&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Support Malbian:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;8735KjeRLbmBJkiCxgUHzj4gUATo6X4QqAnA1FwiXYLZatcGdhFu45zbVGfwkYakhaRYS43HZRVYJX6xEgim57kcEVFNAfd&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Malbian Project</title>
-      <link>https://0xcambie.github.io/cambie/malbian/</link>
+      <link>/malbian/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>matteratze@gmail.com (Cambie ツ)</author>
-      <guid>https://0xcambie.github.io/cambie/malbian/</guid>
+      <guid>/malbian/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/MalbianLinux&#34;&gt;Malbian&lt;/a&gt; is a &lt;strong&gt;debian-based&lt;/strong&gt; GNU/Linux distribution focusing on Malware Analysis and Reverse Engineering.&lt;/p&gt;&#xA;&lt;p&gt;Malbian uses the &lt;a href=&#34;https://xfce.org&#34;&gt;Xfce Desktop Environment&lt;/a&gt; even though there&amp;rsquo;s going to be an extra light-weight ISO with dwm (dynamic window manager) from &lt;a href=&#34;https://suckless.org&#34;&gt;Suckless&lt;/a&gt; which will be the main flavor of the distribution. But don&amp;rsquo;t worry, XFCE4 ISO will continue to be maintained by me.&lt;/p&gt;&#xA;&lt;p&gt;This little project started as a quick way for me to setup a usable linux ISO in order to analyze malware but my friends encouraged me to begin a distribution, so here it is.&lt;/p&gt;</description>
     </item>
   </channel>
