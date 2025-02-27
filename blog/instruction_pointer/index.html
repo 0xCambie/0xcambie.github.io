@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>
+The (Extended) Instruction Pointer (EIP) | Cambie ツ
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.144.1">
+
+
+<link rel="canonical" href="/blog/instruction_pointer/" >
+<link rel="icon" href="/cambie/favicon/radioactive.png" type="image/png">
+
+
+
+
+<link href="/css/style.min.5c1fa9bba2d0e854fe30b3d6316ab0114a2a5f25c9a98275badeadb66f2ec725.css" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>cambie@malbian ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="/about" title="" >
+                        ~/about</a>
+                </li>
+                
+                <li>
+                    <a href="/malbian" title="" >
+                        ~/malbian</a>
+                </li>
+                
+                <li>
+                    <a href="/donate" title="" >
+                        ~/donate</a>
+                </li>
+                
+                <li>
+                    <a href="/blog" title="" >
+                        ~/blog</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+    <h1>The (Extended) Instruction Pointer (EIP)</h1>
+    
+    
+    <section class="postMetadata">
+        <dl>
+            
+            
+            
+            
+                <dt>published</dt>
+                
+                <dd><time datetime="2025-02-26">February 26, 2025</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>1 minute</dd>
+            
+        </dl>
+    </section>
+    
+    <div>
+        <h1 id="what-is-eip-">What is EIP ?</h1>
+<p>The instruction pointer is simply the most important register to deal with in Reverse Engineering. Simply because if we were to alter this pointer to jump to another area in the code we would have complete control over said program flow.</p>
+<p>Consider the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">unrecheableFunction</span>(<span style="color:#66d9ef">void</span>){
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Nobody ever calls me! Except Hackers!&#34;</span>);
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">exit</span>(<span style="color:#ae81ff">1337</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>){
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Hello from Main! My name is Cambie.&#34;</span>);
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>If we compile this program and run it we see the following output:</p>
+<p>But if we are able to change the value of EIP and make it point to the memory address where the hidden function is defined, we can call it!</p>
+
+    </div>
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2025 Cambie ツ
+        </span>
+    
+</footer>
+
+    </div>
+
+</body>
+
+</html>
